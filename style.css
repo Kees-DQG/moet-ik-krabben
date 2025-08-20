@@ -1,38 +1,41 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #cceeff, #ffffff);
-  color: #003366;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.container {
-  text-align: center;
   padding: 20px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
-input {
-  padding: 10px;
-  width: 80%;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #003366;
+
+h1 {
+  text-align: center;
 }
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #00aaff;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#result {
+
+.board {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
   margin-top: 20px;
-  font-size: 24px;
-  font-weight: bold;
 }
+
+.column {
+  flex: 1;
+  min-width: 150px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 300px;
+}
+
+.column h2 {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.employee {
+  width: 80px;
+  height: 80px;
+  margin: 5px auto;
+  cursor: grab;
+  display: block;
+}
+

@@ -1,14 +1,27 @@
-function checkWeather() {
-  const location = document.getElementById("locationInput").value;
-  const result = document.getElementById("result");
+function handleDragStart(e) {
+  e.dataTransfer.setData('text/plain', e.target.id);
+}
 
-  const today = new Date();
-  const month = today.getMonth(); // 0 = januari
-  const hour = today.getHours();
+function handleDragOver(e) {
+  e.preventDefault();
+}
 
-  if ([10, 11, 0, 1, 2].includes(month) && hour < 9) {
-    result.innerText = "JA, je moet krabben! ❄️";
-  } else {
-    result.innerText = "NEE, geen zorgen. 🚗";
+function handleDrop(e) {
+  e.preventDefault();
+  const id = e.dataTransfer.getData('text/plain');
+  const employee = document.getElementById(id);
+  const column = e.target.closest('.column');
+  if (column && employee) {
+    column.appendChild(employee);
   }
 }
+
+document.querySelectorAll('.employee').forEach(emp => {
+  emp.addEventListener('dragstart', handleDragStart);
+});
+
+document.querySelectorAll('.column').forEach(col => {
+  col.addEventListener('dragover', handleDragOver);
+  col.addEventListener('drop', handleDrop);
+});
+
