@@ -1,21 +1,28 @@
-  <!DOCTYPE html>
-  <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moet ik krabben?</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Moet ik krabben?</h1>
-      <input type="text" id="locationInput" placeholder="Vul je woonplaats of postcode in" />
-      <button onclick="checkWeather()">Check</button>
-      <div id="result"></div>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dagplanning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Dagplanning</h1>
+  <div class="board">
+    <div class="column" id="medewerkers">
+      <h2>Medewerkers</h2>
+      <img src="https://via.placeholder.com/80?text=Jan" id="jan" class="employee" draggable="true" />
+      <img src="https://via.placeholder.com/80?text=Piet" id="piet" class="employee" draggable="true" />
+      <img src="https://via.placeholder.com/80?text=Klaas" id="klaas" class="employee" draggable="true" />
     </div>
-    <script src="script.js"></script>
-  </body>
-  </html>
- 
-EOF
-)
+    <div class="column" id="stikken"><h2>Stikken</h2></div>
+    <div class="column" id="snijden"><h2>Snijden</h2></div>
+    <div class="column" id="dacron"><h2>Dacron</h2></div>
+    <div class="column" id="stofferen"><h2>Stofferen</h2></div>
+    <div class="column" id="spuiten"><h2>Spuiten</h2></div>
+    <div class="column" id="inpakken"><h2>Inpakken</h2></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
